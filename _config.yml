@@ -1,4 +1,10 @@
 name: Robert Poole
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
 theme: jekyll-theme-architect
+title: Rob's Blog
+description: programming (mostly web development)
+
+defaults:
+  -
+    values:
+      layout: "default"
