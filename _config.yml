@@ -3,6 +3,7 @@ markdown: kramdown
 theme: jekyll-theme-architect
 title: Rob's Blog
 description: programming (mostly web development)
+permalink: /:title/
 
 defaults:
   -
