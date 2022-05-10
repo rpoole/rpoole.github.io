@@ -4,13 +4,17 @@ list_title: Posts
 title: ''
 ---
 
-I'll mostly post about trying to (for the first time in my life) finish a side
+I'll mainly post about trying to (for the first time in my life) finish a side
 project.
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+<div style="margin-top: 40px">
+  <h2>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </h2>
+  <i class="gray-text" style="font-size: 90%">{{ post.date | date: "%B %d, %Y" }}</i>
+  <div class="gray-text" style="margin-top: 10px; padding-left: 10px; border-left: 5px solid #ddd;">
+    {{ post.content | markdownify | strip_html | truncatewords: 50 }}
+  </div>
+</div>
+{% endfor %}
