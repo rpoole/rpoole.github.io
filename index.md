@@ -1,11 +1,11 @@
 ---
-layout: default
-list_title: Posts
 title: ''
 ---
 
 I'll mainly post about trying to (for the first time in my life) finish a side
 project.
+
+<hr>
 
 {% for post in site.posts %}
 <div style="margin-top: 40px">

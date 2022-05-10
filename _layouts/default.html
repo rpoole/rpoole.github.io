@@ -36,7 +36,21 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
+          <!-- header for posts -->
+          {% if page.path contains '_posts' %}
+            <h2>{{ page.title }}</h2> <i class="gray-text" style="font-size: 90%">{{ page.date | date: "%B %d, %Y" }}</i>
+            <hr>
+          {% endif %}
+
           {{ content }}
+          
+          <!-- footer for posts -->
+          {% if page.path contains '_posts' %}
+            <hr>
+            <div>
+              <a href="/">Home</a>
+            </div>
+          {% endif %}
         </section>
       </div>
     </div>
