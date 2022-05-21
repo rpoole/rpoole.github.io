@@ -1,6 +1,6 @@
 name: Robert Poole
 markdown: kramdown
-theme: jekyll-theme-architect
+theme: jekyll-theme-slate
 title: Rob's Blog
 description: programming (mostly web development)
 permalink: /:title/

@@ -2,18 +2,22 @@
 title: ''
 ---
 
-I'll mainly post about trying to (for the first time in my life) finish a side
-project.
-
-<hr>
-
 {% for post in site.posts %}
-<div style="margin-top: 40px">
-  <h2>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </h2>
+<style>
+ .post:not(:last-child) {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 25px;
+  }
+</style>
+<div class="post">
+  <a class="post-link" href="{{ post.url }}">
+    <h3 class="post-header">
+      {{ post.title }}
+    </h3>
+  </a>
   <i class="gray-text" style="font-size: 90%">{{ post.date | date: "%B %d, %Y" }}</i>
-  <div class="gray-text" style="margin-top: 10px; padding-left: 10px; border-left: 5px solid #ddd;">
+  <div style="margin-top: 10px;">
     {{ post.content | markdownify | strip_html | truncatewords: 50 }}
   </div>
 </div>
