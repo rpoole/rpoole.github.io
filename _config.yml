@@ -9,3 +9,6 @@ defaults:
   -
     values:
       layout: "default"
+
+plugins:
+  - jekyll-target-blank

@@ -1,76 +1,83 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-		<style>
-			.gray-text {
-				color: gray;
-			}
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,maximum-scale=2">
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+        <style>
+            .gray-text {
+                color: gray;
+            }
 
-			#main_content {
-				padding-bottom: 30px;
-				padding-top: 20px;
-				min-height: 500px;
-			}
+            #main_content {
+                padding-bottom: 30px;
+                padding-top: 20px;
+                min-height: 500px;
+            }
 
-			.post-header {
-				margin: 0;
-			}
+            .post-header {
+                margin: 0;
+            }
 
-			.post-link:hover {
-				text-decoration-color: black;
-			}
+            .post-link:hover {
+                text-decoration-color: black;
+            }
 
-			#header_wrap {
-				background: #212121;
-			}
-		</style>
+            #header_wrap {
+                background: #212121;
+            }
 
-{% seo %}
-    {% include head-custom.html %}
-  </head>
+            footer a {
+                text-decoration: none;
+            }
 
-  <body>
+            footer a:not(:first-child) {
+                margin-left: 8px;
+            }
+        </style>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner" style="padding: 20px 10px;">
-          <a style="text-decoration-color: white;" href="/"><h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1></a>
-          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-        </header>
-    </div>
+        {% seo %}
+        {% include head-custom.html %}
+    </head>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-				{% if page.path contains '_posts' %}
-					<a class="post-link" href="{{ page.url }}"><h3 class="post-header">{{ page.title }}</h3></a>
-					<i class="gray-text" style="font-size: 90%">{{ page.date | date: "%B %d, %Y" }}</i>
-				{% endif %}
+    <body>
 
-        {{ content }}
+        <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner" style="padding: 20px 10px;">
+                <a style="text-decoration-color: white;" href="/"><h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1></a>
+                <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+            </header>
+        </div>
 
-				<!-- footer for posts -->
-				{% if page.path contains '_posts' %}
-				<div style="padding-top: 10px; border-top: 1px solid #ddd">
-					<a href="/">Home</a>
-				</div>
-				{% endif %}
+        <!-- MAIN CONTENT -->
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner">
+                {% if page.path contains '_posts' or page.path contains '_drafts' %}
+                <a class="post-link" href="{{ page.url }}"><h3 class="post-header">{{ page.title }}</h3></a>
+                <i class="gray-text" style="font-size: 90%">{{ page.date | date: "%B %d, %Y" }}</i>
+                {% endif %}
 
-      </section>
-    </div>
+                {% include anchor_headings.html html=content anchorBody="#" anchorClass="gray-text"%}
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-      </footer>
-    </div>
-  </body>
+                <!-- footer for posts -->
+                {% if page.path contains '_posts' or page.path contains '_drafts' %}
+                <div style="padding-top: 10px; border-top: 1px solid #ddd">
+                    <a href="/">Home</a>
+                </div>
+                {% endif %}
+
+            </section>
+        </div>
+
+        <!-- FOOTER  -->
+        <div id="footer_wrap" class="outer">
+            <footer class="inner">
+                <a href="mailto:***REMOVED***" target="_blank">Contact</a>
+                <a href="https://github.com/rpoole" target="_blank">Github</a>
+            </footer>
+        </div>
+    </body>
 </html>
