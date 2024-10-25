@@ -54,7 +54,7 @@ That's a big strike against **well supported**.
 #### [WezTerm](https://wezfurlong.org/wezterm/index.html){:target="_blank"}
 
 I'd never heard of WezTerm before, though apparently it's been around since 2019. It claims to be fast and that appears to be true. The support for it
-seemed decent as I was able to hobble together my desired config file pretty
+seemed decent as I was able to cobble together my desired config file pretty
 easily. From what I could tell Windows support is good.
 
 One other thing that really piqued my interest was it's ability to replace
