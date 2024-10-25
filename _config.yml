@@ -11,4 +11,4 @@ defaults:
       layout: "default"
 
 plugins:
-  - jekyll-target-blank
+  - ./_plugins/external_links.rb
