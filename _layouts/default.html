@@ -80,4 +80,18 @@
             </footer>
         </div>
     </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select all anchor tags not inside headings and containing only direct text nodes
+            const links = document.querySelectorAll('a:not([target]):not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a)');
+            links.forEach(link => {
+                // Check if the anchor contains only direct text content (no nested tags)
+                if (link.childNodes.length === 1 && link.childNodes[0].nodeType === Node.TEXT_NODE) {
+                    link.setAttribute('target', '_blank');
+                    link.setAttribute('rel', 'noopener noreferrer');
+                }
+            });
+        });
+    </script>
 </html>
