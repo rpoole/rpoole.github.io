@@ -13,13 +13,13 @@ weighing them against what I currently use. This article will cover the October 
 ### WSL
 
 This was even easier than I remember. A quick google landed me on the [WSL
-install page](https://learn.microsoft.com/en-us/windows/wsl/install). All it
+install page](https://learn.microsoft.com/en-us/windows/wsl/install){:target="_blank"}. All it
 took was a quick:
 {% highlight powershell %}
 wsl --install
 {% endhighlight %}
 
-Don't skip [the best practices page](https://learn.microsoft.com/en-us/windows/wsl/setup/environment)! You'll probably
+Don't skip [the best practices page](https://learn.microsoft.com/en-us/windows/wsl/setup/environment){:target="_blank"}! You'll probably
 want to do some of the suggestions and there's some good tips as well.
 
 ### Terminal Emulator
@@ -37,21 +37,21 @@ The two things I'm looking for in a terminal are:
 
 I considered 3 options:
 
-#### [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/install)
+#### [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/install){:target="_blank"}
 
 I've always used this terminal with WSL in the past, primarily because it was
 the best supported. I started using WSL early on so there weren't many other
 options. It was a bit slow at times, but it otherwise did what I wanted. This
 is my fallback if the other 2 don't work out.
 
-#### [Alacritty](https://alacritty.org/)
+#### [Alacritty](https://alacritty.org/){:target="_blank"}
 
 After doing some research, I decided against Alacritty. Portability is cool,
 but given my limited dependence on terminal features it wasn't a big draw for
 me. And a big deterrent was that windows appeared to be a second class citizen.
 That's a big strike against **well supported**.
 
-#### [WezTerm](https://wezfurlong.org/wezterm/index.html)
+#### [WezTerm](https://wezfurlong.org/wezterm/index.html){:target="_blank"}
 
 I'd never heard of WezTerm before, though apparently it's been around since 2019. It claims to be fast and that appears to be true. The support for it
 seemed decent as I was able to hobble together my desired config file pretty
@@ -71,7 +71,7 @@ Tmux replacement was a bonus, and WezTerm was enjoyable enough that I've
 decided to give it a shot. Worst case I'm back on windows terminal.
 
 - [Config file link](https://github.com/rpoole/dotfiles/blob/master/.wezterm.lua) (tmux parity
-config is there commented out)
+config is there commented out){:target="_blank"}
 
 ### Command Line Tools
 
@@ -81,20 +81,20 @@ using a mouse, and CLI tools tend to be good time investments.
 For all the tools below, installing these in WSL was very simple. The only WSL
 specific hiccup was getting copy/paste working in NVIM.
 
-#### [ZSH](https://ohmyz.sh/)
+#### [ZSH](https://ohmyz.sh/){:target="_blank"}
 
 I should invest more time into learning my shell but haven't. I was a long time
 bash user until mac switched to zsh (most work laptops I've had are macs), so
 I use zsh now. I'd like to try fish shell one day, but zsh works for now. My
 usage of it is pretty entry level.
 
-- [Config file link](https://github.com/rpoole/dotfiles/blob/master/.zshrc)
+- [Config file link](https://github.com/rpoole/dotfiles/blob/master/.zshrc){:target="_blank"}
 
-#### [NeoVim](https://neovim.io/)
+#### [NeoVim](https://neovim.io/){:target="_blank"}
 
 I've been a long time Vim user, and switched to NeoVim awhile ago. It's been
 around a long time and I like to believe the [Lindy
-Effect](https://en.wikipedia.org/wiki/Lindy_effect) is true.
+Effect](https://en.wikipedia.org/wiki/Lindy_effect){:target="_blank"} is true.
 
 Getting the clipboard working with WSL required a little extra config. I had to
 install win32 yank:
@@ -122,9 +122,9 @@ vim.opt.clipboard = "unnamedplus"
 
 I could probably write a whole article about my nvim config, and maybe I will
 one day. For now it's accessible below.
-- [Config file link](https://github.com/rpoole/dotfiles/tree/master/.config/nvim)
+- [Config file link](https://github.com/rpoole/dotfiles/tree/master/.config/nvim){:target="_blank"}
 
-#### [tmux](https://github.com/tmux/tmux/wiki)
+#### [tmux](https://github.com/tmux/tmux/wiki){:target="_blank"}
 
 Since I spend a lot of time in the CLI I need a tool to organize my various
 shells and groupings of shells (tmux sessions). I quickly found tmux after I 
@@ -135,7 +135,7 @@ remote sessions alive is handy as well.
 Missing the combo of `tmux-resurrect` and `tmux-continuum` are what kept me from
 replacing tmux with WezTerm.
 
-- [Config file link](https://github.com/rpoole/dotfiles/blob/master/.tmux.conf)
+- [Config file link](https://github.com/rpoole/dotfiles/blob/master/.tmux.conf){:target="_blank"}
 
 ### All Done
 
