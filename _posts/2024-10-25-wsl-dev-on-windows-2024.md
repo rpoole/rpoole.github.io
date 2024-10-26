@@ -71,15 +71,15 @@ Tmux replacement was a bonus, and WezTerm was enjoyable enough that I've
 decided to give it a shot. Worst case I'm back on windows terminal.
 
 - [Config file link](https://github.com/rpoole/dotfiles/blob/master/.wezterm.lua) (tmux parity
-config is there commented out){:target="_blank"}
+config is there commented out)
 
 ### Command Line Tools
 
 I prefer to spend the majority of my time in the command line. I don't enjoy
 using a mouse, and CLI tools tend to be good time investments.
 
-For all the tools below, installing these in WSL was very simple. The only WSL
-specific hiccup was getting copy/paste working in NVIM.
+For all the tools below, installing these in WSL was no different than Ubuntu. The only WSL
+specific hiccup was getting copy/paste working in nvim.
 
 #### [ZSH](https://ohmyz.sh/){:target="_blank"}
 
@@ -98,7 +98,7 @@ Effect](https://en.wikipedia.org/wiki/Lindy_effect){:target="_blank"} is true.
 
 Getting the clipboard working with WSL required a little extra config. I had to
 install win32 yank:
-1. Download the exe from here `https://github.com/equalsraf/win32yank/releases`
+1. Download the exe from here: [https://github.com/equalsraf/win32yank/releases](https://github.com/equalsraf/win32yank/releases)
 2. `sudo mv win32yank.exe /usr/bin`
 
 then add this snippet to my nvim config:
